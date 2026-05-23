@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Jamaah - jejak imani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <header class="app-header">
+    <img src="https://drive.google.com/thumbnail?id=1ADaHuVjVHr8tP1WuWy1q6f8bLGdFYU9a&sz=w200" alt="Logo Jejak Imani" class="logo">
+    <h1 class="brand-title">jejak imani</h1>
+  </header>
+
+  <nav class="tab-navigation">
+    <button onclick="switchTab('dashboard')" class="nav-btn active">Dashboard</button>
+    <button onclick="switchTab('manasik')" class="nav-btn">Manasik</button>
+    <button onclick="switchTab('doa')" class="nav-btn">Doa</button>
+    <button onclick="switchTab('audio')" class="nav-btn">Audio Guide</button>
+    <button onclick="switchTab('ecommerce')" class="nav-btn">Oleh-Oleh</button>
+  </nav>
+
+  <main class="app-content">
+    
+    <section id="dashboard" class="tab-panel active-panel">
+      <div class="card json-profile" id="profile-section">
+        <h2 class="section-title">Biodata Jamaah</h2>
+        <p>Memuat profil...</p>
+      </div>
+      
+      <div class="card">
+        <h2 class="section-title">Alat Bantu Ibadah Harian</h2>
+        <div class="prayer-times" id="prayer-section">Menghitung waktu shalat Arab Saudi...</div>
+        <div class="compass-container">
+          <div id="compass" class="compass-disc">▲<br>KIBLAT</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="manasik" class="tab-panel">
+      <h2 class="section-title">Pusat Manasik Digital</h2>
+      <div id="manasik-list"></div>
+    </section>
+
+    <section id="doa" class="tab-panel">
+      <h2 class="section-title">Panduan Doa Kontekstual</h2>
+      <select id="doa-stage-select" onchange="filterDoa(this.value)">
+        <option value="Niat Miqat">Niat Miqat</option>
+        <option value="Thawaf Putaran 1">Thawaf Putaran 1</option>
+        <option value="Thawaf Putaran 2">Thawaf Putaran 2</option>
+        <option value="Sa'i">Sa'i</option>
+      </select>
+      <div id="doa-container"></div>
+    </section>
+
+    <section id="audio" class="tab-panel">
+      <h2 class="section-title">Audio Guide (Live Streaming)</h2>
+      <div class="card text-center">
+        <p>Dengarkan bimbingan doa langsung dari Mutawwif lewat Earphone Anda.</p>
+        <audio id="audio-receiver" controls src="https://stream.votocast.com:8214/stream" style="width:100%; margin-top:15px;"></audio>
+      </div>
+    </section>
+
+    <section id="ecommerce" class="tab-panel">
+      <h2 class="section-title">Oleh-Oleh Khas Arab Saudi</h2>
+      <div id="product-list" class="grid-container"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
