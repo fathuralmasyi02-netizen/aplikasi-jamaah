@@ -1,0 +1,16 @@
+{
+  "name": "Aplikasi Jamaah jejak imani",
+  "short_name": "jejak imani",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://drive.google.com/thumbnail?id=1ADaHuVjVHr8tP1WuWy1q6f8bLGdFYU9a&sz=w192",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
