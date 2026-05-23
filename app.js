@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "URL_WEB_APP_ANDA_DI_SINI"; // Ganti dengan URL hasil Deploy Apps Script Anda
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHwAdMyxnXnSfxiCwFajwswL0W10XHaKIXXvEfOucCbnFeqYxOMkMYEuFHK2xQ10CJ/exec"; // Ganti dengan URL hasil Deploy Apps Script Anda
 const USER_EMAIL = "jamaah1@example.com"; // Contoh email sesi login aktif jamaah
 
 // Fungsi Pindah Halaman/Tab
