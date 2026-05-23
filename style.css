@@ -1,0 +1,104 @@
+/* I. PANDUAN DESAIN & VISUAL (UI/UX) */
+:root {
+  --white: #FFFFFF;
+  --gold: #D4AF37;
+  --black: #111111;
+  --gray: #F8F9FA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Mulish', sans-serif; /* Font General */
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.app-header {
+  background-color: var(--white);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.brand-title {
+  font-family: 'Martel', serif; /* Font Khusus Brand */
+  text-transform: lowercase; /* Aturan khusus huruf kecil semua */
+  color: var(--gold);
+  font-size: 24px;
+}
+
+/* Navigasi */
+.tab-navigation {
+  display: flex;
+  background-color: var(--black);
+  overflow-x: auto;
+  sticky: top;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 15px 10px;
+  color: var(--white);
+  background: none;
+  border: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-btn.active {
+  border-bottom: 3px solid var(--gold);
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Komponen Card & Layout */
+.app-content { padding: 20px; }
+.tab-panel { display: none; }
+.tab-panel.active-panel { display: block; }
+
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-family: 'Martel', serif;
+  color: var(--black);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Kompas */
+.compass-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.compass-disc {
+  width: 120px;
+  height: 120px;
+  border: 4px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: var(--white);
+  transition: transform 0.1s ease-out;
+}
